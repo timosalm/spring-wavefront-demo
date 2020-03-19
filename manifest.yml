@@ -1,0 +1,11 @@
+applications:
+  - name: spring-wavefront-demo
+    buildpacks:
+      - java_buildpack
+    memory: 1G
+    random-route: true
+    path: build/libs/spring-wavefront-demo-0.0.1-SNAPSHOT.jar
+    services:
+      - mysql
+    env:
+      JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ }}'
